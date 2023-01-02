@@ -57,9 +57,8 @@ body{
     border: none;
     padding: 10px;
 }
-.navbar button i{
-    font-size: 32px;
-    color: #FFFDEB;
+.navbar button img{
+    width: 30px;
 }
 .navbar .menu-navbar{
     position: absolute;
@@ -154,6 +153,15 @@ body{
     font-family: Leiko;
     font-size: 128px;
     clip-path: inset(0px 0px 0px 0px);
+    line-height: 130px;
+}
+.header .logo2{
+    display: inline-block;
+    padding: 0;
+    margin: 0;
+}
+.header .logo3{
+    margin-left: -35px;
 }
 .header .tagline{
     color: #FFFDEB;
@@ -164,6 +172,11 @@ body{
     right: -85px;
     bottom: 15px;
     clip-path: inset(0px 0px 0px 0px);
+}
+.header .tagline2{
+    display: block;
+    padding: 0;
+    margin: 0;
 }
 .header .back-header:nth-child(1){
     position: absolute;

@@ -23,6 +23,23 @@ function doCoolStuff() {
 }
 
 
+gsap.from(".logo2", {
+    y: 150,
+    rotation: 10,
+    duration: 2,
+    stagger: 0.1,
+    ease: "power3.inOut"
+});
+
+gsap.from(".tagline2", {
+    delay: 2,
+    x: -250,
+    duration: 2,
+    ease: "power3.inOut"
+});
+
+
+
 //animasi sejarah
 gsap.registerPlugin(ScrollTrigger);
 
