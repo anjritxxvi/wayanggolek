@@ -22,29 +22,6 @@ function doCoolStuff() {
     this.anim.reversed(!this.anim.reversed());
 }
 
-//animasi Logo
-var  
-    logo = document.querySelectorAll('.logo'), 
-    letters = new SplitText(logo).chars,
-    tagline = document.querySelectorAll('.tagline'), 
-    taglineLetters = new SplitText(tagline).words;
-
-gsap.from(letters, {
-    y: 150,
-    rotation: 10,
-    duration: 2,
-    stagger: 0.1,
-    ease: "power3.inOut"
-});
-
-gsap.from(taglineLetters, {
-    delay: 2,
-    x: -250,
-    duration: 2,
-    ease: "power3.inOut"
-});
-
-
 
 //animasi sejarah
 gsap.registerPlugin(ScrollTrigger);
