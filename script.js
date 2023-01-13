@@ -6,7 +6,7 @@ console.clear();
 let targets = gsap.utils.toArray(".btn-menu");
 
 targets.forEach((obj) => {
-    obj.anim = gsap.from(".menu", { 
+    obj.anim = gsap.to(".menu", { 
         display: "none",
         opacity: 0,
         x: -100,
@@ -83,7 +83,7 @@ ScrollTrigger.matchMedia({
             scrollTrigger: {
                 trigger: ".box-gamelan",
                 scrub: true,
-                start: "bottom bottom",
+                start: "95% bottom",
                 end: "300% bottom",
                 toggleActions: "play none reverse none",
                 pin: true,
@@ -188,7 +188,7 @@ ScrollTrigger.matchMedia({
             scrollTrigger: {
                 trigger: ".box-gamelan",
                 scrub: true,
-                start: "bottom bottom",
+                start: "90% bottom",
                 end: "300% bottom",
                 toggleActions: "play none reverse none",
                 pin: true,
@@ -279,18 +279,33 @@ ScrollTrigger.matchMedia({
             ease: Expo.easeInOut,
             delay: 3,
         });
-        gsap.from(".content-sejarah-1", {
-            x: -100,
-            opacity: 0,
-            ease: "none",
-            scrollTrigger: {
-                trigger: ".sejarah",
-                scrub: true,
-                start: "50% bottom",
-                end: "bottom bottom",
-                toggleActions: "play none reverse none",
-            }
+        
+        gsap.to(".judul-nav", {
+          scrollTrigger: {
+            trigger: "#sejarah",
+            start: "top top",
+            end: "top top",
+            scrub: 1,
+          },
+          color: "#BFDF8C",
         });
+
+        gsap.to(".judul-nav", {
+          scrollTrigger: {
+            trigger: "#sejarah",
+            start: "99% top",
+            end: "99% top",
+            scrub: 1,
+          },
+          color: "#FF2847",
+          immediateRender: false
+        });
+        
+        function getElementPosition(element, bottom = false) {
+          let position = element.offset().top - $(window).scrollTop();
+          return !bottom ? position : position + element.outerHeight();
+        }
+        
         gsap.from(".content-sejarah-2", {
             y: 100,
             opacity: 0,
@@ -299,12 +314,12 @@ ScrollTrigger.matchMedia({
                 trigger: ".img-sejarah-2",
                 containerAnimation: scrollTween,
                 scrub: true,
-                start: "left 50%",
-                end: "right 50%",
+                start: "left right",
+                end: "right right",
                 toggleActions: "play none reverse none",
             }
         });
-        gsap.from(".img-sejarah-3", {
+        gsap.from(".content-sejarah-3", {
             y: -100,
             opacity: 0,
             ease: "none",
@@ -312,8 +327,8 @@ ScrollTrigger.matchMedia({
                 trigger: ".img-sejarah-3",
                 containerAnimation: scrollTween,
                 scrub: true,
-                start: "50% right",
-                end: "right right",
+                start: "left right",
+                end: "50% right",
                 toggleActions: "play none reverse none",
             }
         });
@@ -325,8 +340,8 @@ ScrollTrigger.matchMedia({
                 trigger: ".img-sejarah-4",
                 containerAnimation: scrollTween,
                 scrub: true,
-                start: "50% right",
-                end: "right right",
+                start: "left right",
+                end: "75% right",
                 toggleActions: "play none reverse none",
             }
         });
@@ -338,8 +353,8 @@ ScrollTrigger.matchMedia({
                 trigger: ".img-sejarah-5",
                 containerAnimation: scrollTween,
                 scrub: true,
-                start: "50% right",
-                end: "right right",
+                start: "left right",
+                end: "75% right",
                 toggleActions: "play none reverse none",
             }
         });
@@ -700,6 +715,7 @@ ScrollTrigger.matchMedia({
             ease: "none",
             left: "-50%",
             top: "-50%",
+            opacity: 0,
             scrollTrigger: {
                 trigger: ".box-galeri",
                 scrub: true,
@@ -711,6 +727,7 @@ ScrollTrigger.matchMedia({
         gsap.to(".img-galeri2", {
             ease: "none",
             top: "-50%",
+            opacity: 0,
             scrollTrigger: {
                 trigger: ".box-galeri",
                 scrub: true,
@@ -723,6 +740,7 @@ ScrollTrigger.matchMedia({
             ease: "none",
             top: "-50%",
             right: "-50%",
+            opacity: 0,
             scrollTrigger: {
                 trigger: ".box-galeri",
                 scrub: true,
@@ -735,6 +753,7 @@ ScrollTrigger.matchMedia({
             ease: "none",
             bottom: "-50%",
             left: "-50%",
+            opacity: 0,
             scrollTrigger: {
                 trigger: ".box-galeri",
                 scrub: true,
@@ -746,6 +765,7 @@ ScrollTrigger.matchMedia({
         gsap.to(".img-galeri5", {
             ease: "none",
             left: "-50%",
+            opacity: 0,
             scrollTrigger: {
                 trigger: ".box-galeri",
                 scrub: true,
@@ -757,6 +777,7 @@ ScrollTrigger.matchMedia({
         gsap.to(".img-galeri6", {
             ease: "none",
             right: "-50%",
+            opacity: 0,
             scrollTrigger: {
                 trigger: ".box-galeri",
                 scrub: true,
@@ -769,6 +790,7 @@ ScrollTrigger.matchMedia({
             ease: "none",
             right: "-50%",
             bottom: "-50%",
+            opacity: 0,
             scrollTrigger: {
                 trigger: ".box-galeri",
                 scrub: true,
@@ -779,24 +801,13 @@ ScrollTrigger.matchMedia({
         });
         gsap.to(".img-galeri8", {
             ease: "none",
-            bottom: "-100%",
+            bottom: "-50%",
+            opacity: 0,
             scrollTrigger: {
                 trigger: ".box-galeri",
                 scrub: true,
                 start: "100% bottom",
                 end: "150% bottom",
-                toggleActions: "play none reverse none",
-            }
-        });
-        gsap.to(".box-galeri", {
-            ease: "none",
-            duration: 0,
-            delay: 0,
-            display: "none",
-            scrollTrigger: {
-                trigger: ".box-galeri",
-                start: "105% bottom",
-                end: "105% bottom",
                 toggleActions: "play none reverse none",
             }
         });
