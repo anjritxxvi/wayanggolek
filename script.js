@@ -7,9 +7,8 @@ let targets = gsap.utils.toArray(".btn-menu");
 
 targets.forEach((obj) => {
     obj.anim = gsap.to(".menu", { 
-        display: "none",
-        opacity: 0,
-        x: -100,
+        display: "block",
+        opacity: 1,
         delay: 0,
         duration: 1,
         ease: "power3.inOut",
@@ -279,22 +278,90 @@ ScrollTrigger.matchMedia({
             ease: Expo.easeInOut,
             delay: 3,
         });
+        gsap.from(".mode-web", 2, {
+            bottom: "-20%",
+            ease: Expo.easeInOut,
+            delay: 3,
+        });
         
         gsap.to(".judul-nav", {
           scrollTrigger: {
             trigger: "#sejarah",
-            start: "top top",
-            end: "top top",
+            start: "-5% top",
+            end: "-5% top",
             scrub: 1,
           },
-          color: "#BFDF8C",
+          color: "#DEA627",
         });
 
         gsap.to(".judul-nav", {
           scrollTrigger: {
             trigger: "#sejarah",
-            start: "99% top",
-            end: "99% top",
+            start: "95% top",
+            end: "95% top",
+            scrub: 1,
+          },
+          color: "#FF2847",
+          immediateRender: false
+        });
+        
+        gsap.to(".judul-nav", {
+          scrollTrigger: {
+            trigger: "#elemen",
+            start: "-5% top",
+            end: "-5% top",
+            scrub: 1,
+          },
+          color: "#DEA627",
+        });
+
+        gsap.to(".judul-nav", {
+          scrollTrigger: {
+            trigger: "#elemen",
+            start: "95% top",
+            end: "95% top",
+            scrub: 1,
+          },
+          color: "#FF2847",
+          immediateRender: false
+        });
+        
+        gsap.to(".mode-web a", {
+          scrollTrigger: {
+            trigger: "#sejarah",
+            start: "-5% 90%",
+            end: "-5% 90%",
+            scrub: 1,
+          },
+          color: "#DEA627",
+        });
+
+        gsap.to(".mode-web a", {
+          scrollTrigger: {
+            trigger: "#sejarah",
+            start: "95% 90%",
+            end: "95% 90%",
+            scrub: 1,
+          },
+          color: "#FF2847",
+          immediateRender: false
+        });
+        
+        gsap.to(".mode-web a", {
+          scrollTrigger: {
+            trigger: "#elemen",
+            start: "-5% 90%",
+            end: "-5% 90%",
+            scrub: 1,
+          },
+          color: "#DEA627",
+        });
+
+        gsap.to(".mode-web a", {
+          scrollTrigger: {
+            trigger: "#elemen",
+            start: "95% 90%",
+            end: "95% 90%",
             scrub: 1,
           },
           color: "#FF2847",

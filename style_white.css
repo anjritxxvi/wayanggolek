@@ -8,7 +8,7 @@ html, body {
 }
 
 body{
-    background-color: #000;
+    background-color: #FFFDEB;
     margin: 0;
     overscroll-behavior: none;
     overflow-x: hidden;
@@ -102,7 +102,7 @@ body{
     font-family: PP Eiko M; 
     font-size: 14px;
     line-height: 22px;
-    color: #FFFDEB;
+    color: #000;
     text-align: right;
     margin: 5px 10px;
     padding: 5px 15px;
@@ -147,25 +147,25 @@ body{
     font-family: PP Eiko L; 
     font-size: 32px;
     line-height: 52px;
-    color: #FFFDEB;
+    color: #000;
 }
 .sub-title-bold{
     font-family: PP Eiko M;
     font-size: 32px;
     line-height: 52px;
-    color: #FFFDEB;
+    color: #000;
 }
 .body-text{
     font-family: roboto; 
     font-size: 14px;
     line-height: 22px;
-    color: #FFFDEB;
+    color: #000;
     margin-bottom: 0;
 }
 .sumber{
     font-family: roboto; 
     font-size: 8px;
-    color: #FFFDEB;
+    color: #000;
     margin-bottom: 0;
     margin-top: 10px;
 }
@@ -213,7 +213,7 @@ body{
     margin-left: -35px;
 }
 .header .tagline{
-    color: #FFFDEB;
+    color: #000;
     font-family: PP Eiko B;
     font-size: 24px;
     line-height: 37px;
@@ -700,7 +700,7 @@ body{
     height: 100vh;
 }
 .wagol-2 .title{
-    color: #FFFDEB;
+    color: #000;
     text-align: center;
     position: relative;
     z-index: 1;
@@ -1005,7 +1005,7 @@ body{
     font-family: PP Eiko B; 
     font-size: 32px;
     line-height: 52px;
-    color: #FFFDEB;
+    color: #000;
 }
 .gamelan .box-gamelan .gamelan1 img{
     max-width: 100%;
@@ -1143,6 +1143,10 @@ body{
     left: 0;
     position: absolute;
     padding: 0 15px;
+    color: #FFFDEB;
+}
+.panggung .box-text-panggung .text-panggung .body-text{
+    color: #FFFDEB;
 }
 
 .video{
@@ -1213,7 +1217,7 @@ body{
     position: absolute;
     right: 50px;
     top: 25px;
-    color: #FFFDEB;
+    color: #000;
     z-index: 10;
     opacity: 1 !important;
     text-align: center;
@@ -1283,7 +1287,7 @@ body{
     z-index: 2;
 }
 .modal{
-    background: rgba(0, 0, 0, 1);
+    background: #FFFDEB;
 }
 .modal-dialog{
     position: absolute;
@@ -1378,13 +1382,13 @@ body{
     color: #DEA50A;
 }
 .finish .quotes{
-    color: #FFFDEB;
+    color: #000;
 }
 .finish .quotes-bold{
-    color: #FFFDEB;
+    color: #000;
 }
 .finish .body-text{
-    color: #FFFDEB;
+    color: #000;
 }
 
 @media (max-width: 1900px){ 
